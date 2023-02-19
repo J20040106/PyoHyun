@@ -1,0 +1,28 @@
+<html>
+    <head>
+	<title>표현 사이트</title>
+	<meta name="description" content="표현을 못하는 장애 아동들을 위한 사이트 입니다.">
+	<meta name="description" />
+	<meta name="keywords" content="자폐증, 아스퍼거, 사회적 의사소통 장애" />
+	<meta name="author" content="J" />
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="표현 사이트">
+	<meta property="og:description" content="표현을 못하는 장애 아동들을 위한 사이트 입니다.">
+	<meta charset="utf-8">
+</head>
+<body>
+    <center>
+    <button onclick="Speach('배고파요')">배고파요</button> 
+    </center>
+</body>
+<script>
+    function Speach(text){
+			// SpeechSynthesisUtterance 객체 생성
+			var msg = new SpeechSynthesisUtterance();
+			msg.text = text; // 출력할 텍스트
+			msg.lang = 'ko-KR'; // 출력할 언어 코드
+			// TTS 시작
+			window.speechSynthesis.speak(msg);
+    }
+</script>
+</html>
